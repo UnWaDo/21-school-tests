@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char	*ft_strlcpy(char *dest, char *src, unsigned int size);
+int	ft_strlcpy(char *dest, char *src, unsigned int size);
 
 int	main (void)
 {
@@ -11,33 +11,28 @@ int	main (void)
 	int		i;
 
 	b = malloc(50);
+	memset(b, 42, 50);
 	a = "This string will be copied";
-	printf("%s\n", b);
-	printf("%s\n", ft_strcapitalize(b));
-	a = "And THiS 1 2...";
-	b = strcpy(b, a);
-	printf("%s\n", b);
-	printf("%s\n", ft_strcapitalize(b));
-	a = "WhAt wIlL YoU\n\tdO WiTh ThIs?";
-	b = strcpy(b, a);
-	printf("%s\n", b);
-	printf("%s\n", ft_strcapitalize(b));
-	a = ". . . . H M M . . . .";
-	b = strcpy(b, a);
-	printf("%s\n", b);
-	printf("%s\n", ft_strcapitalize(b));
-	a = "What about THIS one: ?";
-	b = strcpy(b, a);
-	printf("%s\n", b);
-	printf("%s\n", ft_strcapitalize(b));
-	a = "";
-	b = strcpy(b, a);
-	printf("What about this one: %s\n", b);
-	printf("%s\n", ft_strcapitalize(b));
-	a = "Just to be sure: salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
-	b = strcpy(b, a);
-	printf("%s\n", b);
-	printf("%s\n", ft_strcapitalize(b));
+	printf("A: %s\n", a);
+	printf("B: %s\n", b);
+	memset(b, 42, 50);
+	i = strlcpy(b, a, 10);
+	printf("B (exp, 10), i: %s, %d\n", b, i);
+	memset(b, 42, 50);
+	i = ft_strlcpy(b, a, 10);
+	printf("B (fnd, 10), i: %s, %d\n", b, i);
+	memset(b, 42, 50);
+	i = strlcpy(b, a, 30);
+	printf("B (exp, 30), i: %s, %d\n", b, i);
+	memset(b, 42, 50);
+	i = ft_strlcpy(b, a, 30);
+	printf("B (fnd, 30), i: %s, %d\n", b, i);
+	memset(b, 42, 50);
+	i = strlcpy(b, a, 0);
+	printf("B (exp, 0), i: %s, %d\n", b, i);
+	memset(b, 42, 50);
+	i = ft_strlcpy(b, a, 0);
+	printf("B (fnd, 0), i: %s, %d\n", b, i);
 	free(b);
 	return (0);
 }
