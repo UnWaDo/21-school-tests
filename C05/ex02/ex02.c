@@ -30,7 +30,12 @@ int	main(void)
 	ft_test_with_input(10, 7);
 	ft_test_with_input(8, 4);
 	ft_test_with_input(10, -1);
+	ft_test_with_input(0, -5);
+	ft_test_with_input(1, -6);
 	ft_test_with_input(2, 31);
 	ft_test_with_input(-2, 5);
 	ft_test_with_input(-2, 6);
+	ft_test_with_input(2147483647, 1);
+	ft_test_with_input(-2147483648, 1);
+	ft_test_with_input(-2147483648, 0);
 }

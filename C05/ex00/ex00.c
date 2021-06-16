@@ -18,6 +18,7 @@ void	ft_test_with_input(int nb)
 	else
 		printf("KO\n");
 }
+
 int	main(void)
 {
 	int	i;
@@ -28,4 +29,7 @@ int	main(void)
 		ft_test_with_input(i);
 		i++;
 	}
+	ft_test_with_input(-10);
+	ft_test_with_input(2147483647);
+	ft_test_with_input(-2147483648);
 }

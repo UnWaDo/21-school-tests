@@ -28,4 +28,7 @@ int	main(void)
 		ft_test_with_input(i);
 		i++;
 	}
+	ft_test_with_input(-12);
+	ft_test_with_input(2147483647);
+	ft_test_with_input(-2147483648);
 }

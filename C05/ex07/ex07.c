@@ -25,6 +25,8 @@ int	main(void)
 	ft_test_with_input(23, 23);
 	ft_test_with_input(100, 101);
 	ft_test_with_input(978, 983);
+	ft_test_with_input(-24, 2);
+	ft_test_with_input(-2147483648, 2);
 	ft_test_with_input(6857324, 6857329);
 	ft_test_with_input(6183644, 6183659);
 	ft_test_with_input(10570841, 10570841);
