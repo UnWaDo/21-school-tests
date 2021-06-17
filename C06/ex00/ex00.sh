@@ -4,7 +4,7 @@ if test $# -eq 0 ; then
 	exit
 fi
 DIR=$(pwd)
-echo -n "$1" > $DIR/exp.output
+echo "$1" > $DIR/exp.output
 "$1" > $DIR/res.output
 echo "Program output: `$1`"
 DIF=$(diff $DIR/exp.output $DIR/res.output)
